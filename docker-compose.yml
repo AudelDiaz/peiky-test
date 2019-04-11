@@ -1,0 +1,25 @@
+version: "3"
+services:
+  database:
+    image: postgres:9.6
+    env_file: .env_file
+
+  app:
+    build: src/
+    image: audeldiaz/peiky-devtest
+    volumes:
+      - ./src:/usr/src/app
+    env_file: .env_file
+    depends_on:
+      - database
+
+  proxy:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./src/static:/static
+      - ./src/media:/media
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app

@@ -1,0 +1,13 @@
+Django
+django-heroku
+django-import-export
+django-jet
+django-rest-framework
+djangorestframework
+djangorestframework-csv
+gunicorn
+psycopg2
+psycopg2-binary
+Pillow
+django-cors-headers
+django-storages[google]

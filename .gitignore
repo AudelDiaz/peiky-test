@@ -1,0 +1,12 @@
+venv/
+.vscode/
+src/*/migrations/
+src/*/__pycache__/
+src/*.json
+src/.idea/
+client/.idea/
+client/dist/
+cliente/node_modules/
+src/staticfiles/
+src/static/
+src/media/
